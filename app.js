@@ -48,10 +48,10 @@ console.log(url);
 let numberA = 40;
 numberA += 5;
 numberA -= 2;
-numberA++, number--;
+numberA++;
 numberA *= 2;
 
-console.log(number);
+
 
 //Dividing 10 slices to 4 Children without considering reminders (We will need to remove reminders from the 10/4 fraction)
 const slices = 10;
