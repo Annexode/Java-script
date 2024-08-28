@@ -51,8 +51,6 @@ numberA -= 2;
 numberA++;
 numberA *= 2;
 
-
-
 //Dividing 10 slices to 4 Children without considering reminders (We will need to remove reminders from the 10/4 fraction)
 const slices = 10;
 const children = 4;
@@ -121,4 +119,60 @@ console.log(typeof name);
 const reuslt = null;
 console.log(typeof null);
 
-// 6. Symbol
+// 6. Symbol (To be covered later)
+
+//Arrays, Function Objects
+//Arrays indexing start from zero
+
+//Example one
+const friends = [
+  "Sibo",
+  "Roger",
+  "Emmy",
+  "Liliane",
+  "Fiona",
+  "Mukiza",
+  "Anny",
+  "Yves",
+  "Carine",
+  "Dorcas",
+];
+let bestFriend = friends[0];
+friends[9] = "Kellia";
+
+console.log(friends);
+console.log(bestFriend);
+
+//Example two
+const random = ["Umuntu", 42, null, undefined, "50"];
+
+console.log(random);
+console.log(random[0]);
+console.log(random[1]);
+console.log(random[4]);
+console.log(random[7]);
+
+//Functions + Declare + Invoke
+
+//Example one
+function annexode() {
+  //logic is place inside this curly brace
+  console.log("Annexode is going to be a hell of coder");
+  console.log("But only if he does't give up learning");
+  console.log("This is the way");
+}
+
+//Invoke 1
+annexode();
+
+//Invoke 2
+annexode();
+
+//Example two
+function languages(language) {
+  console.log("I speak" + " " + language);
+}
+
+languages("English");
+languages("Russian");
+languages("French");
