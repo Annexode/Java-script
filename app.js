@@ -454,8 +454,8 @@ newFunction("inside");
 // }
 
 //Invoking recursive functions
-function recurse(){
-  if(base_condition){
+function recurse() {
+  if (base_condition) {
     // do something
     return;
   }
@@ -463,8 +463,8 @@ function recurse(){
 }
 
 //example
-function fetchWater(count){
-  if(count ===0){
+function fetchWater(count) {
+  if (count === 0) {
     console.log("No more water left");
     return;
   }
@@ -473,3 +473,350 @@ function fetchWater(count){
 }
 
 fetchWater(10);
+
+//Conditional functions
+const valuex = value;
+if (2 < 1) {
+  console.log("I am Annexode the coder");
+} else {
+  console.log("I am also the editor");
+}
+
+const person = {
+  izina: "Annexode",
+  iryakabiri: "IGIIRANEZA",
+  amavuko: "3rd,January 2000",
+  imyaka: 25,
+  uburezi: true,
+  married: false,
+  abana: ["Anny", "Iigya", "peace"],
+  indamukanyo() {
+    console.log("I am also the [parent]");
+  },
+};
+
+person.izina = "Igiraneza";
+console.log(person.izina);
+const iryakabiri = person.iryakabiri;
+console.log(iryakabiri);
+const imyaka = person.imyaka;
+console.log(imyaka);
+const amavuko = person.amavuko;
+console.log(amavuko);
+
+const num1 = 4;
+const num2 = 4;
+const results = num1 >= num2;
+
+if (num1 > num2) {
+  console.log("hello there");
+} else if (results) {
+  console.log("I dont't know how");
+} else {
+  console.log("hello hell");
+}
+
+const urukundo = false;
+
+if (!urukundo) {
+  console.log("I will go to the store");
+}
+
+//== Check only values
+//=== Check values and data type
+const umubare1 = 5;
+const umubare2 = "5";
+
+const agaciro = umubare1 == umubare2;
+const agaciro2 = umubare1 === umubare2;
+
+console.log(agaciro);
+console.log(agaciro2);
+
+//Logical Operators
+//(|| or ) , (&&-And)
+
+const degree = true;
+const experience = true;
+
+if (degree === true || experience === true) {
+  console.log("Qualified");
+}
+
+const wisdom = true;
+const humble = true;
+
+if (wisdom === true && humble === true) {
+  console.log("You are my type");
+}
+
+//Swith
+//dice values ; 1 - 6
+const dice = 1;
+
+switch (dice) {
+  case 1:
+    console.log("one");
+    break;
+  case 2:
+    console.log("two");
+    break;
+  case 3:
+    console.log("three");
+    break;
+}
+
+// if (dice === 1){
+//   console.log("one");
+// }
+
+// if (dice === 2){
+//   console.log("two");
+// }
+
+// if (dice < 1 || dice > 6){
+//   console.log("I did not roll the dice")
+// }
+
+//loops
+let amounti = 10;
+while (amounti > 0) {
+  console.log("i have" + amounti + "rwf and i am going to the market");
+  amounti--;
+}
+
+// let money = 0;
+
+// do{
+//   console.log("I have" + money + "rwf and i am going to the market");
+//   money++;
+// }while (money < 10);
+
+let money = 10;
+
+do {
+  console.log("i have " + "" + money + "rwf and i am going to the market");
+  money++;
+} while (money < 7);
+
+// let i;
+// for (i = 0; i < 10, i++) {
+//   console.log("and the number is : " + i);
+// }
+
+for (let number = 11; number >= 0; number--) {
+  console.log("and the number is : " + number);
+}
+
+//Summing everything together
+let texti = " peter";
+let resulti = texti.length;
+console.log(texti.length);
+console.log(texti.toLowerCase());
+console.log(texti.toUpperCase());
+console.log(texti.charAt(0));
+console.log(texti.charAt(4));
+console.log(texti.charAt(texti.length - 2));
+console.log(texti.indexOf("p"));
+console.log(texti.indexOf(" "));
+console.log(texti);
+console.log(texti.trim());
+console.log(texti.startsWith(" peter"));
+console.log(texti.trim().startsWith("peter"));
+console.log(texti.includes("er"));
+console.log(texti.slice(0, 2));
+console.log(texti.slice(-5));
+
+const namer = "john";
+const age = 25;
+const sentence = "Hey it's " + namer + " and he is " + age + " years old";
+
+const annegi = `Hello it's ${namer} and he's ${age} years old.`;
+console.log(annegi);
+
+console.log(sentence);
+
+const interuro = `I am called ${namer} and i am ${age} years old`;
+console.log(interuro);
+
+const units = 100;
+const pricePerUnit = 500;
+const totalPrice = units * pricePerUnit;
+const budget = `I am going to the market to buy ${units} oranges and one cost ${pricePerUnit} which means i need to go with total amount of ${totalPrice}. And here is the simple math ${
+  4 * 4
+}`;
+
+console.log(budget);
+// console.log(resulti);
+//Array properties and methods
+let names = [
+  "Annexode",
+  "Reponse",
+  "Pascal",
+  "Jerussa",
+  "Sam",
+  "peace",
+  "Kwizera",
+  "Merveille",
+];
+
+//length
+console.log(names.length);
+console.log(names[names.length - 1]);
+
+const lastNames = ["Pepper", "Onion", "Banana"];
+const allNames = names.concat(lastNames);
+
+console.log(allNames);
+
+//reverse
+console.log(allNames.reverse());
+
+//unshift
+allNames.unshift("IGIRANEZA");
+console.log(allNames);
+
+//shift
+allNames.shift("IGIRANEZA");
+allNames.shift("Reponse");
+console.log(allNames);
+
+const teams = ["barca", "APR", "tothenham", "gasogi"];
+console.log(teams);
+
+teams.unshift("barca");
+console.log(teams);
+teams.shift();
+teams.shift();
+teams.shift();
+teams.shift();
+teams.unshift("barca");
+console.log(teams);
+
+//Push add the beginning
+teams.push("barca");
+teams.push("Museveni");
+console.log(teams);
+
+//Pop add at the end
+teams.pop();
+teams.pop();
+teams.pop();
+teams.push("Niyonshuti");
+
+console.log(teams);
+
+//Splice - mutates original array
+const amazina = ["umuntu", "umupira", "abagabo", "amakuru", "abasaza"];
+console.log(amazina);
+console.log(amazina.splice(0, 1));
+console.log(amazina);
+// console.log(amazina.splice(1,1))
+// const specificNames = allNames.splice(2,1);
+// console.log(specificNames);
+// console.log(allNames);
+
+//Arrays and for loo
+const members = ["Rwanda", "Uganda", "DRC", "Burundi", "Tanzania", "Kenya"];
+const membership = [":true"];
+let stateship = [];
+
+for (let i = 0; i < members.length; i++) {
+  console.log(i);
+  console.log(members[i]);
+  stateship.push(`${members[i]} ${membership}`);
+}
+
+console.log(members);
+console.log(stateship);
+
+//Functions, return, if, arrays, for loop.
+const gas = [20, 40, 100, 30];
+const food = [10, 40, 50];
+
+function calculateTotal(prices) {
+  let total = 0;
+  for (let i = 0; i < prices.length; i++) {
+    total += prices[i];
+  }
+
+  if (total > 100) {
+    console.log(`You are spendind way too much`);
+    return total;
+  }
+  console.log(`Uhhh looks like you are spending responsbly`);
+
+  return total;
+}
+
+const gasTotal = calculateTotal(gas);
+const foodTotal = calculateTotal(food);
+const totalPrices = calculateTotal([
+  calculateTotal(gas) + calculateTotal(food),
+]);
+
+console.log({
+  gas: gasTotal,
+  food: foodTotal,
+  totalPrices: totalPrices,
+});
+
+// REFERENCE VS VALUE
+//PRIMITIVE DATA TYPES
+//STRINGS, NUMBER, BOOLEAN, UNDEFINED,NULL,
+//ARRAYS, FUNCTIONS, OBJECT = OBJECT
+
+const aa = 1;
+let aa2 = a;
+aa2 = 7;
+console.log(`the first number is ${aa} and the second number is ${aa2}`);
+
+let personx = { name: "ANNEXODE" };
+let persony = personx;
+persony.name = "IGIRANEZA";
+console.log(
+  `the first person is ${personx.name} and the second person is ${persony.name}`
+);
+
+//NULL VS UNDEFINED
+const xy = 20 + null;
+console.log(xy);
+
+const yz = 20 + undefined;
+console.log(yz);
+
+//Conditions / runs if true or false
+const valuez = 1 < 0;
+valuez ? console.log("Value is true") : console.log("Value is false");
+
+const annexodeAge = age >= 24;
+const ageAnnexode = 24;
+annexodeAge ? console.log("Yes , he is") : console.log("No , he is not");
+
+//variable lookup
+//{} - Code block
+// function greetMorning(){
+//   const myName = "Annexode";
+//   audience = "Anny"
+// console.log(`Good morning ${audience}, my name is ${myName}`);
+// }
+
+// greetMorning();
+
+//CALL BACK FUNCTION
+
+function morning() {
+  console.log("Good morning Anny");
+}
+
+function greet(names, cb) {
+  const myName = "Annexode";
+  console.log(`${names}, my name is ${myName}`);
+  cb();
+}
+
+greet("Anny", morning);
+greet("Sibo", morning);
+
+//Example 2
+
