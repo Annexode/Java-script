@@ -819,4 +819,382 @@ greet("Anny", morning);
 greet("Sibo", morning);
 
 //Example 2
+hello(goodbye);
+function goodbye() {
+  console.log("I am running JavaScript");
+}
+function hello(callback) {
+  console.log("hello");
+  callback();
+}
 
+//EXAMPLE 3
+
+function hobby2() {
+  console.log("And I love watching movies too");
+}
+function hobby(callback) {
+  console.log("I love to play basketball");
+  callback();
+}
+
+hobby(hobby2);
+
+function hobby2() {
+  document.getElementById("test2").textContent = "I love to play movies";
+}
+
+//example 4
+function sum(callback, x, y) {
+  let result = x + y;
+  callback(result);
+}
+
+function displayConsole(result) {
+  console.log(result);
+}
+
+sum(displayConsole, 5, 7);
+
+function displayConsole(result) {
+  document.getElementById("test").textContent = result;
+}
+
+//Powerfull arrays methods
+
+const numbers = [0, 1, 2, 3, 4];
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+//for each // does not return new array
+// const people = [
+//   { name: "Annexode", age: 25, position: "Leaner" },
+//   { name: "Yves", age: 25, position: "Tutor" },
+//   { name: "Benimana", age: 26, position: "Leaner" },
+//   { name: "Elie", age: 23, position: "Leaner" },
+// ];
+
+// function displayPerson(person) {
+//   console.log(person.age);
+// }
+// people.forEach(displayPerson);
+
+//Example 2
+const family = [
+  {
+    names: "Aime Reponse",
+    age: 28,
+    career: "Accountant",
+    id: 1,
+    income: 1300000,
+  },
+  {
+    names: "Pascal Muragwa",
+    age: 26,
+    career: "Veterinary",
+    id: 2,
+    income: 1000000,
+  },
+  {
+    names: "Annexode Igiraneza",
+    age: 24,
+    career: "Lab tech & Coder",
+    id: 3,
+    income: 400000,
+  },
+  {
+    names: "Charite Jerusalem",
+    age: 22,
+    career: "Teacher",
+    id: 4,
+    income: 100000,
+  },
+  { names: "Samuel Cadet", age: 22, career: "Engineer", id: 5, income: 100000 },
+  {
+    names: "Merveille Mugisha",
+    age: 22,
+    career: "Medical Doctor",
+    id: 6,
+    income: 0,
+  },
+  {
+    names: "Peace Museveniya",
+    age: 22,
+    career: "Accountant",
+    id: 7,
+    income: 0,
+  },
+  {
+    names: "Mediatrice Kwizera",
+    age: 22,
+    career: "Medical Doctor",
+    id: 8,
+    income: 0,
+  },
+];
+// function sibling(person){
+//   console.log(person.names + " " + person.age + " ");
+// }
+// family.forEach(function (person){
+//   console.log(person.names + " " + person.age);
+//   console.log(person.career.toUpperCase());
+// });
+
+// const ages = family.map(function (item) {
+//   return item.age + " " + item.career.toUpperCase();
+// });
+// const newFamily = family.map(function (item){
+//   return {
+//     firstName:item.names.toLocaleUpperCase(),
+//     oldAge:item.age + 5,
+//   }
+// });
+// // console.log(ages);
+// const nameS = family.map(function (item){
+// return `<h1>${item.names}</h1>`;
+// });
+// document.body.innerHTML = nameS.join(" ");
+// console.log(nameS);
+
+//With filter we get back an array when called
+const youngFamily = family.filter(function (siblings) {
+  return siblings.age <= 22;
+});
+
+const medicalDoctors = family.filter(function (siblings) {
+  return siblings.career === "Medical Doctor";
+});
+
+const coder = family.filter(function (siblings) {
+  return siblings.career === "Lab tech & Coder";
+});
+
+console.log(youngFamily);
+console.log(medicalDoctors);
+console.log(coder);
+
+//find
+const besties = ["Sibo", "Liliane", "Roger"];
+const sibling = family.find(function (sibling) {
+  return sibling.id === 3;
+});
+
+console.log(sibling);
+console.log(
+  besties.find(function (bestie) {
+    return bestie === "Sibo";
+  })
+);
+
+//Reduce function
+const people = [
+  { name: "Annexode", age: 25, position: "Leaner", id: 1, salary: 10000 },
+  { name: "Yves", age: 25, position: "Tutor", id: 1, salary: 2000 },
+  { name: "Benimana", age: 26, position: "Leaner", id: 1, salary: 40000 },
+  { name: "Elie", age: 23, position: "Leaner", id: 1, salary: 50000 },
+];
+
+const monthlyExpenses = people.reduce(function (acc, currItem) {
+  console.log(`Total: ${acc}`);
+  console.log(`Current Expense: ${currItem.salary}`);
+  acc += currItem.salary;
+  return acc;
+}, 0);
+
+console.log(monthlyExpenses);
+
+//Standard built in Object
+const check = Math.floor(Math.sqrt(24.4));
+console.log(check);
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+];
+
+const dates = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "23",
+  "24",
+  "25",
+  "26",
+  "27",
+  "28",
+  "29",
+  "30",
+  "31",
+];
+
+const hours = [
+  "0PM",
+  "1AM",
+  "2AM",
+  "3AM",
+  "4AM",
+  "5AM",
+  "6AM",
+  "7AM",
+  "8AM",
+  "9AM",
+  "10AM",
+  "11AM",
+  "12AM",
+  "1PM",
+  "2PM",
+  "3PM",
+  "4PM",
+  "5PM",
+  "6PM",
+  "7PM",
+  "8PM",
+  "9PM",
+  "10PM",
+  "11PM",
+  "12PM",
+];
+
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
+
+const date = new Date();
+console.log(date);
+
+const umunsi = date.getDay() - 1;
+console.log(days[umunsi]);
+
+const ukwezi = date.getMonth();
+console.log(months[ukwezi]);
+
+const itariki = date.getDate() - 1;
+console.log(dates[itariki]);
+
+const isaha = date.getHours();
+console.log(hours[isaha]);
+
+const umwaka = date.getFullYear();
+console.log(umwaka);
+
+const amatariki = `${days[umunsi]}, ${dates[itariki]} ${
+  months[ukwezi]
+} ${date.getFullYear()},  ${hours[isaha]}`;
+console.log(amatariki);
+
+// document.body.innerHTML = amatariki
+
+
+
+//DOM. Document Object Model
+
+document.querySelector("label").style.display = "none";
+
+document.querySelector("h1").style.backgroundColor = "green";
+
+const title = document.getElementById("title");
+const elementType = title.nodeName;
+const css = title.style;
+
+console.log(elementType);
+console.log(elementType);
+console.log(css);
+
+const list = document.getElementsByTagName("li");
+const extendedList = [...list];
+
+console.log(extendedList);
+list[3].style.color = "green";
+list[3].style.fontSize = "40px";
+extendedList.forEach(function (item) {
+  item.style.backgroundColor = "yellow";
+  console.log(item);
+});
+
+const lastList = document.querySelector(".last");
+lastList.style.backgroundColor = "red";
+
+console.log(list);
+
+const attributions = document.querySelector("#attributions");
+const attributes = attributions.children;
+const extendedAttributes = [...attributes];
+
+extendedAttributes.forEach(function (attribute) {
+  attribute.style.fontSize = "100px";
+  console.log(attribute);
+});
+const allAtrributes = attributions.childNodes;
+
+console.log(extendedAttributes);
+
+// console.log(attributes);
+// console.log(allAtrributes);
+
+const heading = document.querySelector("h4");
+console.log(heading);
+
+const paragraph = document.querySelector("p");
+const parent = paragraph.parentElement;
+parent.style.backgroundColor = "blue";
+
+
+//NextSibling and previousSibling
+const first = document.querySelector(".first");
+const second = first.nextSibling.nextSibling.style.color = "white";
+
+
+console.log(first);
+console.log(second);
+
+const last = document.querySelector("#last");
+const beforelast = last.previousSibling.previousSibling;
+
+
+
+console.log(beforelast);
+console.log(last);
+
+const special =document.getElementById("special");
+const content = special.lastChild.nodeValue;
+
+console.log(content);
+
+
+//gettAttributes();
+//setAttribute();
